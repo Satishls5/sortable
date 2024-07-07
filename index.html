@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Table with Sorting and Dynamic Box</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+<div class="container">
+    <h1> Sort table rows based on columns values</h1>
+   
+
+    <table class="table table-striped">
+        <thead>
+            <tr class="bg-info">
+                <th data-column="name" data-order="desc">Name <span class="sort-icon">&#9650;</span></th>
+                <th data-column="age" data-order="desc">Age <span class="sort-icon">&#9650;</span></th>
+                <th data-column="birthdate" data-order="desc">Birthday <span class="sort-icon">&#9650;</span></th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <!-- Table body will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <div class="dynamic-box">
+        <h2>Add New Person</h2>
+        <form id="addPersonForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" required>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Birthday:</label>
+                <input type="text" class="form-control" id="birthdate" placeholder="MM/DD/YYYY" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Person</button>
+        </form>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
